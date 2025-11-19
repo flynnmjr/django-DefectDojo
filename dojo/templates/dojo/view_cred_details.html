@@ -158,7 +158,7 @@
                                 {{ note.date }}
                             </td>
                             <td>
-                                {{ note|markdown_render }}
+                                {{ note.entry|markdown_render }}
                                 {% if person == note.author.username %}
                                     <div class="pull-right">
                                         <form method="post" action="{% url 'delete_note' note.id 'cred' cred.id %}">
