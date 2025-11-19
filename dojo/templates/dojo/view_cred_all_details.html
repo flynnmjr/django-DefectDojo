@@ -145,7 +145,7 @@
                             {{ note.date }}
                         </td>
                         <td>
-                            {{ note }}
+                            {{ note|markdown_render }}
                         </td>
                     </tr>
                 {% endfor %}

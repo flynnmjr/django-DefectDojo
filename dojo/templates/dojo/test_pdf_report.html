@@ -184,7 +184,7 @@
                                                     </td>
                                                 {% endif %}
                                                 <td>
-                                                    {{ note|linebreaks }}
+                                                    {{ note|markdown_render }}
                                                 </td>
                                             </tr>
                                         {% endfor %}
@@ -405,7 +405,7 @@
                                                 </td>
                                                 {% endif %}
                                                 <td>
-                                                    {{ note|linebreaks }}
+                                                    {{ note|markdown_render }}
                                                 </td>
                                             </tr>
                                         {% endfor %}

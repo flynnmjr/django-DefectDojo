@@ -669,7 +669,7 @@
                                                         <strong>Note type : {{ note.note_type }}</strong>
                                                         <br><br>
                                                     {% endif %}
-                                                    {{ note|linebreaks }}
+                                                    {{ note|markdown_render }}
                                                 </div>
                                             </div>
                                         </div>

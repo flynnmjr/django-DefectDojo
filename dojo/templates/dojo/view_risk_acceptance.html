@@ -305,7 +305,7 @@
                             {{ note.date }}
                         </td>
                         <td>
-                            {{ note }}
+                            {{ note|markdown_render }}
                         </td>
                         <td>
                             {% if engagement|has_object_permission:"Risk_Acceptance" %}
