@@ -174,7 +174,7 @@
                                 {% if test.notes.all %}
                                     {% for note in test.notes.all %}
                                         {% if not note.private %}
-                                            {{ note.author }} - {{ note.date }} - {{ note }} <br>
+                                            {{ note.author }} - {{ note.date }} - {{ note.entry|markdown_render }} <br>
                                         {% endif %}
                                     {% endfor %}
                                 {% endif %}
@@ -393,7 +393,7 @@
                                                 </td>
                                                 {% endif %}
                                                 <td>
-                                                    {{ note|linebreaks }}
+                                                    {{ note.entry|markdown_render }}
                                                 </td>
                                             </tr>
                                         {% endfor %}

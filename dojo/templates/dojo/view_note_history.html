@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load display_tags %}
 {% load i18n %}
 {% block content %}
     {{ block.super }}
@@ -21,7 +22,7 @@
                   {% if note.note_type != None %}
                     <strong>{% trans "Note type:" %} {{ note.note_type }}</strong><br>
                   {% endif %}
-                  {{ entry.data }}
+                  {{ entry.data|markdown_render }}
                 </div>
                 </div>
             </div>

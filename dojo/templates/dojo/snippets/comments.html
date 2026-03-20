@@ -78,7 +78,7 @@
           <strong>Note type : {{ note.note_type }}</strong>
           <br><br>
         {% endif %}
-        {{ note|linebreaks }}
+        {{ note.entry|markdown_render }}
       </div>
     </div>
   </div>
